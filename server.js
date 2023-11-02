@@ -50,14 +50,14 @@ const isAuth = (req, res, next) => {
 };
 
 app.get('/', isAuth, (req, res) => {
-  res.sendFile(__dirname + '/dashboard.html');
+  res.render('dashboard.ejs')
 });
 
 app.get('/login', (req, res) => {
   if (req.user) {
     return res.redirect('/');
   }
-  res.sendFile(__dirname + '/login.html');
+  res.render('login.ejs');
 });
 
 app.get('/logout', (req, res) => {

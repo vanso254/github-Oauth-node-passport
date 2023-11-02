@@ -3,3 +3,6 @@
 - [x] session
 - [x] protected
 - [x] logout
+
+To Install-npm install
+To run - npm start
